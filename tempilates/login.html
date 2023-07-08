@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div style="width: 70%; margin: 0 auto">
+        <form action=""  method="POST"> {% csrf_token %} 
+
+            <input type="text" name="email" placeholder="emilcha" >
+            <br>
+            <br>
+            <input type="text" name="pasword" placeholder="Kodni kiriting">
+            <br>
+            <br>
+            <input type="submit" value="Login">
+    
+    </form>
+</div>
+<a href="{% url 'social:begin' 'github' %}">Login with Github</a> <br/>
+<br>
+<br>
+<div class="row">
+        <button class="btn btn-primary mb-2">
+            <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+            </button>
+
+            <div class="col-md-8 mx-auto social-container my-2 order-md-1">
+                <button class="btn btn-primary mb-2">
+                    <a href="{% url 'social:begin' 'facebook' %}">Login with Facebook</a>
+                    </button>
+                <!-- <button class="btn btn-primary mb-2">
+                    <a href="#">Login with Facebook</a>
+                </button> -->
+
+</head>
+<body>
+    
+</body>
+</html>
